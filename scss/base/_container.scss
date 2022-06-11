@@ -1,7 +1,29 @@
 .container {
-    width: 1200px;
+    
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
+
+    @include mq(mobile) {
+        width: 450px;
+        
+    }
+
+    @include mq(tablet) {
+        width: 738px;
+   
+    }
+
+    @include mq(desktop) {
+        width: 1170px;
+   
+    }
+
+    // @media screen and (min-width: 1200px) {
+    //     width: 1170px;
+
+    // }
+    
+
 }

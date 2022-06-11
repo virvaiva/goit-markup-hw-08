@@ -1,15 +1,37 @@
 /* Contacts */
 .contact {
-    display: flex;
-    margin-left: auto;
-    padding: 0;
+
+    @include mq(mobile-only) {
+        display: none;
+
+    }
+
+    @include mq(tablet) {
+        display: block;
+        margin-left: auto;
+        padding: 0;
+    }
+
+    @include mq(desktop) {
+        display: flex;
+        margin-left: auto;
+        padding: 0;
+    }
+
+
 }
 
 .contact__item:not(:last-child) {
     margin-right: 50px;
 }
 
+
 .contact__link {
+    @include mq(tablet) {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    }
+
     display: flex;
     align-items: center;
     padding-top: 32px;
