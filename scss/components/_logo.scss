@@ -1,6 +1,10 @@
 /* logo */
 
 .logo {
+    @include mq(mobile-only) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
     display: block;
     color: var(--accent-color);
     font-family: Raleway, sans-serif;

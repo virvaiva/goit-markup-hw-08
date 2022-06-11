@@ -30,7 +30,7 @@
 
 
 .contact__link {
-    @include mq(tablet) {
+    @include mq(not-desktop) {
     padding-top: 0px;
     padding-bottom: 10px;
     }

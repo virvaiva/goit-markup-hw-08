@@ -105,6 +105,13 @@ input {
   text-decoration: none;
 }
 
+@media screen and (max-width: 767.98px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
 .logo__name {
   color: #000000;
 }
@@ -171,7 +178,7 @@ input {
   transition: color var(--anim);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199.98px) {
   .contact__link {
     padding-top: 0px;
     padding-bottom: 10px;
