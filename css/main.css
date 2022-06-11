@@ -146,6 +146,12 @@ input {
   margin-right: 50px;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .contact__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
 .contact__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -752,13 +758,6 @@ textarea::placeholder {
   text-decoration: none;
   -webkit-transition: color var(--anim);
   transition: color var(--anim);
-}
-
-@media screen and (min-width: 768px) {
-  .navigation-list__link {
-    padding-top: 0px;
-    padding-bottom: 32px;
-  }
 }
 
 .navigation-list__link:hover, .navigation-list__link:focus {

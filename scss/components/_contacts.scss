@@ -22,6 +22,9 @@
 }
 
 .contact__item:not(:last-child) {
+    @include mq(not-desktop) {
+        margin-right: 0;
+    }
     margin-right: 50px;
 }
 
