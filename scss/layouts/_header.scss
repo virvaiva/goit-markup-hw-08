@@ -1,9 +1,17 @@
 /* header__container */
 .header__container {
+    @include mq(tablet-only) {
+        justify-content: space-between;
+    }
+
     display: flex;
     align-items: center;
 }
 
 .header {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    background-color: #fff;
     border-bottom: 1px solid #ececec;
 }

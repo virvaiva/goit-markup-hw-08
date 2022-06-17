@@ -1,175 +1,226 @@
 /* Подвал */
 .address {
-    margin-bottom: 9px;
-    color: #ffffff;
+  margin-bottom: 9px;
+  color: #ffffff;
 
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
-
-
 .footer__container {
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+  @include mq(desktop) {
     display: flex;
     align-items: baseline;
+  }
 }
 
 .footer-list_link {
-    color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    transition: color var(--anim);
+  transition: color var(--anim);
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .footer-item:nth-last-child(2) {
-    margin-bottom: 9px;
+  margin-bottom: 9px;
 }
 
-
-
 .footer {
-    background-color: #2f303a;
-    padding-top: 60px;
-    padding-bottom: 60px;
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-contact {
+  @include mq(mobile-only) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  @include mq(tablet-only) {
+    margin-right: 165px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  @include mq(desktop) {
     margin-right: auto;
+    text-align: start;
+  }
 }
 
 .join {
+  @include mq(mobile-only) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  @include mq(tablet) {
+    text-align: center;
+  }
+  @include mq(desktop) {
     margin-right: auto;
+    text-align: start;
+  }
 }
 
 .join-title {
-    margin-top: 0;
-    margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .join-list {
-    display: flex;
-    align-items: center;
+  @include mq(mobile-only) {
+    justify-content: center;
+  }
+  display: flex;
+  align-items: center;
 }
 
 .join-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
 
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    transition: background-color var(--anim);
+  transition: background-color var(--anim);
 
-    &:hover,
-    &:focus {
-        background-color: #2196f3;
-    }
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+  }
 }
 
 .join-item:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .join-icons {
-    fill: #ffffff;
+  fill: #ffffff;
 }
-
 
 // Подпишись на рассылку
 
 .mail-blank {
-    margin: 0;
-    padding: 0;
+    @include mq(not-desktop) {
+        text-align: center;
+    }
+  margin: 0;
+  padding: 0;
 }
 
 .mail-blank__title {
-    display: block;
-    margin: 0;
-    margin-bottom: 20px;
+  @include mq(not-desktop) {
+    text-align: center;
+  }
+  display: block;
+  margin: 0;
+  margin-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .mail-form {
+  @include mq(desktop) {
     display: flex;
+  }
 }
 
 .mail-form__name {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 16px;
+  @include mq(mobile-only) {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  @include mq(tablet-only) {
+    display: block;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  @include mq(desktop) {
     margin-right: 12px;
+  }
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
 
-    width: 358px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    background-color: #2f303a;
-    color: rgba(255, 255, 255, 0.6);
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #2f303a;
+  color: rgba(255, 255, 255, 0.6);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-button {
-    padding: 10px 28px;
+  padding: 10px 28px;
 
-    background: #2196f3;
-    border-color: #2196f3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: 0px;
+  background: #2196f3;
+  border-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .mail-button__telegram {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
 }
 
 .mail-button__icon {
-    fill: currentColor;
-    margin-left: 10px;
+  fill: currentColor;
+  margin-left: 10px;
 }
