@@ -1,6 +1,6 @@
 .filtr {
   @include mq(not-desktop) {
-    padding-top: 60px;
+    margin-top: 60px;
     padding-bottom: 60px;
   }
 
@@ -40,8 +40,10 @@
     }
   }
 
-  &:not(:last-child) {
-    margin-right: 8px;
+  @include mq(tablet) {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 }
 
@@ -85,6 +87,10 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+  @include mq(tablet-only) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .portfolio {
@@ -95,6 +101,9 @@
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
+  @include mq(tablet-only) {
+    flex-grow: 1;
+  }
 }
 
 .portfolio__title {
@@ -118,7 +127,6 @@
 
 .filtr-list__item {
   display: block;
-  text-align: center;
 
   @include mq(mobile-only) {
     &:not(:last-child) {
@@ -127,15 +135,14 @@
     }
   }
   @include mq(tablet) {
-    width: 354px;
+    width: calc((100% - 30px) / 2);
     &:nth-child(2n + 1) {
       margin-right: 30px;
     }
     &:last-child {
       margin-right: 0;
     }
-    
-    &:nth-child(-n + 2) {
+    &:nth-child(-n + 8) {
       margin-bottom: 30px;
     }
   }
@@ -144,6 +151,7 @@
     margin-right: 30px;
     margin-bottom: 30px;
     position: relative;
+    text-align: center;
 
     &:nth-child(3n) {
       margin-right: 0;
