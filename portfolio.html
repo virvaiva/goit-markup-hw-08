@@ -44,25 +44,25 @@
         </nav>
 
         <!-- Mobile menu -->
-        <button class="mobile__button" type="button" data-modal-open>
-          <svg class="mobile-icon" width="40" height="40">
+        <button class="mobile__button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="mobile-icon" width="40" height="40" aria-label="Переключатель мобильного меню">
             <use href="./images/sprite.svg#icon-menu-mobile"></use>
           </svg>
         </button>
-        <div class="backdrop-moby is-hidden" data-modal>
+        <div class="backdrop-moby js-menu-container" id="mobile-menu">
           <div class="mobile-menu">
-            <button class="mobile-btn" type="button" data-modal-close>
-              <svg class="mobile-close" viewbox="0 0 320 512" width="40" height="40">
+            <button class="mobile-btn js-close-menu">
+              <svg class="mobile-close" viewbox="0 0 320 512" width="40" height="40" aria-label="Переключатель мобильного меню">
                 <use href="./images/sprite.svg#icon-close-mobile"></use>
               </svg>
             </button>
             <ul class="mobile-menu__nav">
               <li class="mobile-menu__item">
-                <a class="mobile-menu__link" href="./index.html">Студия
+                <a class="mobile-menu__link mobile-menu__link--activ" href="./index.html">Студия
                 </a>
               </li>
               <li class="mobile-menu__item">
-                <a class="mobile-menu__link mobile-menu__link--activ" href="./portfolio.html">Портфолио</a>
+                <a class="mobile-menu__link" href="./portfolio.html">Портфолио</a>
               </li>
               <li class="mobile-menu__item">
                 <a class="mobile-menu__link" href="">Контакты</a>
@@ -529,18 +529,8 @@
       })();
     </script>
 
-    <script src="./js/mobile.js"></script>
-    <script>
-      (() => {
-        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
-          e.preventDefault();
-
-          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
-
-          e.currentTarget.reset();
-        });
-      })();
-    </script>
+    <script src="./js/mobile-menu.js"></script>
+    
 
     
   </body>

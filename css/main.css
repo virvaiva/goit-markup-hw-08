@@ -765,26 +765,23 @@ textarea::placeholder {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 10;
-  -webkit-transition: opacity var(--anim), visibility var(--anim);
-  transition: opacity var(--anim), visibility var(--anim);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop-moby.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
-.backdrop-moby.is-hidden .moby {
-  -webkit-transform: scale(0.4);
-          transform: scale(0.4);
-  opacity: 0;
+.backdrop-moby.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .backdrop-moby.moby {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 .mobile-icon {

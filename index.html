@@ -46,15 +46,15 @@
         </nav>
 
         <!-- Mobile menu -->
-        <button class="mobile__button" type="button" js-open-menu>
-          <svg class="mobile-icon" width="40" height="40">
+        <button class="mobile__button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="mobile-icon" width="40" height="40" aria-label="Переключатель мобильного меню">
             <use href="./images/sprite.svg#icon-menu-mobile"></use>
           </svg>
         </button>
-        <div class="backdrop-moby is-hidden" js-menu-container>
+        <div class="backdrop-moby js-menu-container" id="mobile-menu">
           <div class="mobile-menu">
-            <button class="mobile-btn" type="button" js-close-menu>
-              <svg class="mobile-close" viewbox="0 0 320 512" width="40" height="40">
+            <button class="mobile-btn js-close-menu">
+              <svg class="mobile-close" viewbox="0 0 320 512" width="40" height="40" aria-label="Переключатель мобильного меню">
                 <use href="./images/sprite.svg#icon-close-mobile"></use>
               </svg>
             </button>
@@ -775,7 +775,7 @@
     </footer>
 
     <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
+    
 
     <script>
       (() => {
@@ -788,6 +788,8 @@
         });
       })();
     </script>
+
+    <script src="./js/mobile-menu.js"></script>
 
   </body>
 </html>
