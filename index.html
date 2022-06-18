@@ -44,11 +44,59 @@
             </li>
           </ul>
         </nav>
-        <button class="mobile__button" type="button" data-modal-open>
-            <svg class="mobile-icon" width="40" height="40">
-                <use href="./images/sprite.svg#icon-menu-mobile"></use>
+
+        <!-- Mobile menu -->
+        <button class="mobile__button" type="button" js-open-menu>
+          <svg class="mobile-icon" width="40" height="40">
+            <use href="./images/sprite.svg#icon-menu-mobile"></use>
+          </svg>
+        </button>
+        <div class="backdrop-moby is-hidden" js-menu-container>
+          <div class="mobile-menu">
+            <button class="mobile-btn" type="button" js-close-menu>
+              <svg class="mobile-close" viewbox="0 0 320 512" width="40" height="40">
+                <use href="./images/sprite.svg#icon-close-mobile"></use>
               </svg>
-          </button>
+            </button>
+            <ul class="mobile-menu__nav">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link mobile-menu__link--activ" href="./index.html">Студия
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__contacts">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link tel-link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link mail-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-socials">
+              <li class="mobile-socials__item">
+                <a class="mobile-socials__link" href="">Instagram</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a class="mobile-socials__link" href="">Twitter</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a class="mobile-socials__link" href="">Facebook</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a class="mobile-socials__link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <ul class="contact">
           <li class="contact__item">
             <a class="contact__link" href="mailto:info@devstudio.com">
@@ -193,11 +241,17 @@
           <h2 class="activity__title">Чем мы занимаемся</h2>
           <ul class="activity-list">
             <li class="activity-list__item">
-              <img class="activity-list__img" src="images/box1.jpg" alt="Cхема" width="370" height="294" />
+              <img
+                class="activity-list__img"
+                src="images/box1.jpg"
+                alt="Cхема"
+                width="370"
+                height="294"
+              />
               <p class="activity-list__text text">Десктопные приложения</p>
             </li>
             <li class="activity-list__item">
-              <img 
+              <img
                 class="activity-list__img"
                 src="images/box2.jpg"
                 alt="Варианты макета на телефоне"
@@ -207,7 +261,13 @@
               <p class="activity-list__text text">Мобильные приложения</p>
             </li>
             <li class="activity-list__item">
-              <img class="activity-list__img" src="images/box3.jpg" alt="Цветовая палитра" width="370" height="294" />
+              <img
+                class="activity-list__img"
+                src="images/box3.jpg"
+                alt="Цветовая палитра"
+                width="370"
+                height="294"
+              />
               <p class="activity-list__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -221,19 +281,18 @@
           <ul class="command-list">
             <li class="command-list__item">
               <img
-              srcset="
-              ./images/igor-demyanenko-270.webp 270w,
-              ./images/igor-demyanenko-354.webp 354w,
-              ./images/igor-demyanenko-450.webp 450w,
-              ./images/igor-demyanenkoimg@2x-270.webp 540w,
-              ./images/igor-demyanenko@2x-354.webp 708w,
-              ./images/igor-demyanenko@2x-450.webp 900w   
-              "
+                srcset="
+                  ./images/igor-demyanenko-270.webp       270w,
+                  ./images/igor-demyanenko-354.webp       354w,
+                  ./images/igor-demyanenko-450.webp       450w,
+                  ./images/igor-demyanenkoimg@2x-270.webp 540w,
+                  ./images/igor-demyanenko@2x-354.webp    708w,
+                  ./images/igor-demyanenko@2x-450.webp    900w
+                "
                 class="command-list__img"
                 src="./images/igor-demyanenko-270.webp"
                 lang="en"
                 alt="Product Designer"
-                
                 sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
               />
               <div class="our-command">
@@ -297,14 +356,14 @@
             </li>
             <li class="command-list__item">
               <img
-              srcset="
-              ./images/olga-repina-270.webp 270w,
-              ./images/olga-repina-354.webp 354w,
-              ./images/olga-repina-450.webp 450w,
-              ./images/olga-repinaimg@2x-270.webp 540w,
-              ./images/olga-repina@2x-354.webp 708w,
-              ./images/olga-repina@2x-450.webp 900w                
-              "
+                srcset="
+                  ./images/olga-repina-270.webp       270w,
+                  ./images/olga-repina-354.webp       354w,
+                  ./images/olga-repina-450.webp       450w,
+                  ./images/olga-repinaimg@2x-270.webp 540w,
+                  ./images/olga-repina@2x-354.webp    708w,
+                  ./images/olga-repina@2x-450.webp    900w
+                "
                 class="command-list__img"
                 src="images/olga-repina-270.webp"
                 lang="en"
@@ -372,14 +431,14 @@
             </li>
             <li class="command-list__item">
               <img
-              srcset="
-              ./images/nikolai-tarasov-270.webp 270w,
-              ./images/nikolai-tarasov-354.webp 354w,
-              ./images/nikolai-tarasov-450.webp 450w,
-              ./images/nikolai-tarasov@2x-270.webp 540w,
-              ./images/nikolai-tarasov@2x-354.webp 708w,
-              ./images/nikolai-tarasov@2x-450.webp 900w 
-              "
+                srcset="
+                  ./images/nikolai-tarasov-270.webp    270w,
+                  ./images/nikolai-tarasov-354.webp    354w,
+                  ./images/nikolai-tarasov-450.webp    450w,
+                  ./images/nikolai-tarasov@2x-270.webp 540w,
+                  ./images/nikolai-tarasov@2x-354.webp 708w,
+                  ./images/nikolai-tarasov@2x-450.webp 900w
+                "
                 class="command-list__img"
                 src="./images/nikolai-tarasov-270.webp"
                 lang="en"
@@ -447,14 +506,14 @@
             </li>
             <li class="command-list__item">
               <img
-              srcset="
-              ./images/mikhail-ermakov-270.webp 270w,
-              ./images/mikhail-ermakov-354.webp 354w,
-              ./images/mikhail-ermakov-450.webp 450w,
-              ./images/mikhail-ermakovimg@2x-270.webp 540w,
-              ./images/mikhail-ermakovimg@2x-354.webp 708w,
-              ./images/mikhail-ermakov@2x-450.webp 900w               
-              "
+                srcset="
+                  ./images/mikhail-ermakov-270.webp       270w,
+                  ./images/mikhail-ermakov-354.webp       354w,
+                  ./images/mikhail-ermakov-450.webp       450w,
+                  ./images/mikhail-ermakovimg@2x-270.webp 540w,
+                  ./images/mikhail-ermakovimg@2x-354.webp 708w,
+                  ./images/mikhail-ermakov@2x-450.webp    900w
+                "
                 class="command-list__img"
                 src="./images/mikhail-ermakov-270.webp"
                 alt="UI Designer"
@@ -613,10 +672,11 @@
 
     <!--Подвал-->
     <footer class="footer">
-
       <div class="container footer__container">
         <div class="footer-contact">
-          <a class="logo logo-footer" href="./index.html"> Web<span class="logo-footer__name">Studio</span> </a>
+          <a class="logo logo-footer" href="./index.html">
+            Web<span class="logo-footer__name">Studio</span>
+          </a>
           <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
           <ul class="footer-list">
             <li class="footer-list__item">
@@ -693,13 +753,20 @@
           <b class="mail-blank__title">Подпишитесь на рассылку</b>
           <form class="mail-form" name="mail-form">
             <label for="mail-form">
-              <input class="mail-form__name" type="text" name="mail-name" id="sub-form" placeholder="E-mail" />
+              <input
+                class="mail-form__name"
+                type="text"
+                name="mail-name"
+                id="sub-form"
+                placeholder="E-mail"
+              />
             </label>
             <button class="mail-button" type="submit">
-              <span class="mail-button__telegram">Подписаться
-              <svg class="mail-button__icon" width="24" height="24">
-                <use href="./images/sprite.svg#icon-telegram"></use>
-              </svg>
+              <span class="mail-button__telegram"
+                >Подписаться
+                <svg class="mail-button__icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-telegram"></use>
+                </svg>
               </span>
             </button>
           </form>
@@ -707,52 +774,8 @@
       </div>
     </footer>
 
-    Mobile menu 
-    <div class="mobile-menu is-hidden">
-      <div class="moby">
-        <button class="mobile-btn" type="button" data-mobile-close>
-              <svg class="mobile-close" viewbox="0 0 320 512" width="40" height="40">
-                <use href="./images/sprite.svg#icon-close-mobile"></use>
-              </svg>
-            </button>
-      <ul class="mobile-menu__nav">
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="./index.html">Студия</a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="./portfolio.html">Портфолио</a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="">Контакты</a>
-        </li>
-      </ul>
-      <ul class="mobile-menu__contacts">
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link tel-link" href="tel:+380961111111">+38 096 111 11 11</a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link mail-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        </li>
-      </ul>
-      <ul class="mobile-socials">
-        <li class="mobile-socials__item">
-          <a class="mobile-socials__link" href="">Instagram</a>
-        </li>
-        <li class="mobile-socials__item">
-          <a class="mobile-socials__link" href="">Twitter</a>
-        </li>
-        <li class="mobile-socials__item">
-          <a class="mobile-socials__link" href="">Facebook</a>
-        </li>
-        <li class="mobile-socials__item">
-          <a class="mobile-socials__link" href="">LinkedIn</a>
-        </li>
-      </ul>
-      </div>
-    </div>
-
-
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 
     <script>
       (() => {
@@ -765,5 +788,6 @@
         });
       })();
     </script>
+
   </body>
 </html>

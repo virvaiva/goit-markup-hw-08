@@ -25,6 +25,9 @@
 
 .feature-list__item {
   width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   @include mq(tablet) {
     width: calc((100% - 30px) / 2);

@@ -30,23 +30,71 @@
 
           <ul class="navigation-list">
             <li class="navigation-list__item">
-              <a class="navigation-list__link navigation-list__link--activ" href="./index.html"
+              <a class="navigation-list__link" href="./index.html"
                 >Студия</a
               >
             </li>
             <li class="navigation-list__item">
-              <a class="navigation-list__link" href="./portfolio.html">Портфолио</a>
+              <a class="navigation-list__link navigation-list__link--activ" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="navigation-list__item">
               <a class="navigation-list__link" href="./index.html">Контакты</a>
             </li>
           </ul>
         </nav>
+
+        <!-- Mobile menu -->
         <button class="mobile__button" type="button" data-modal-open>
-            <svg class="mobile-icon" width="40" height="40">
-                <use href="./images/sprite.svg#icon-menu-mobile"></use>
+          <svg class="mobile-icon" width="40" height="40">
+            <use href="./images/sprite.svg#icon-menu-mobile"></use>
+          </svg>
+        </button>
+        <div class="backdrop-moby is-hidden" data-modal>
+          <div class="mobile-menu">
+            <button class="mobile-btn" type="button" data-modal-close>
+              <svg class="mobile-close" viewbox="0 0 320 512" width="40" height="40">
+                <use href="./images/sprite.svg#icon-close-mobile"></use>
               </svg>
-          </button>
+            </button>
+            <ul class="mobile-menu__nav">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="./index.html">Студия
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link mobile-menu__link--activ" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__contacts">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link tel-link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link mail-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-socials">
+              <li class="mobile-socials__item">
+                <a class="mobile-socials__link" href="">Instagram</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a class="mobile-socials__link" href="">Twitter</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a class="mobile-socials__link" href="">Facebook</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a class="mobile-socials__link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <ul class="contact">
           <li class="contact__item">
             <a class="contact__link" href="mailto:info@devstudio.com">
@@ -466,5 +514,34 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
+
+    <script>
+      (() => {
+        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+
+          e.currentTarget.reset();
+        });
+      })();
+    </script>
+
+    <script src="./js/mobile.js"></script>
+    <script>
+      (() => {
+        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+
+          e.currentTarget.reset();
+        });
+      })();
+    </script>
+
+    
   </body>
 </html>
