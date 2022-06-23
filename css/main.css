@@ -1249,25 +1249,30 @@ textarea::placeholder {
   }
 }
 
-.feature-list__item {
-  width: 100%;
+@media screen and (max-width: 767px) {
+  .feature-list__item {
+    width: 100%;
+  }
+  .feature-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-.feature-list__item:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature-list__item {
     width: calc((100% - 30px) / 2);
   }
   .feature-list__item:nth-child(2n + 1) {
     margin-right: 30px;
   }
+  .feature-list__item:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .feature-list__item {
+    margin-bottom: 0;
     width: calc((100% - 3 * 30px) / 4);
   }
   .feature-list__item:not(:last-child) {

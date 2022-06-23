@@ -24,24 +24,32 @@
 }
 
 .feature-list__item {
+  @include mq(mobile-only) {
   width: 100%;
   &:not(:last-child) {
     margin-bottom: 30px;
   }
+}
 
-  @include mq(tablet) {
+  @include mq(tablet-only) {
     width: calc((100% - 30px) / 2);
     &:nth-child(2n + 1) {
-      margin-right: 30px;
+      margin-right: 30px;  
+    }
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
     }
   }
 
   @include mq(desktop) {
+    margin-bottom: 0;
     width: calc((100% - 3 * 30px) / 4);
     &:not(:last-child) {
       margin-right: 30px;
     }
   }
+
 }
 
 .feature-list__item::before {
